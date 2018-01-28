@@ -1,0 +1,768 @@
+
+$main_background_color: #303030;
+$input_background_color: #3A3A3A;
+$inpute_disabled_bg_color: #6B6B6B;
+$commesh_blue: #10BDC9;
+$input_border_color: #464545;
+$button_hover_color: #636363;
+
+
+.btn {
+  border: 0 none;
+  font-weight: 100;
+  letter-spacing: 1px;
+  border-radius: 5px;
+}
+
+
+.btn-group .btn-default
+{
+  margin: 0 3px;
+}
+
+
+.table td,th {
+  text-align: center;
+}
+
+.im-centered {
+  margin: 10px;
+  width:100%;
+}
+
+
+.container-fluid {
+  padding: 15px;
+}
+
+.td-row-new {
+  @extend .my-bootstraptable-tr;
+  color: #7FFF7F;
+}
+
+//if viewport is mobile
+@media (max-width: 992px) {
+
+  .container {
+    padding: 0px;
+    margin : 0px;
+    overflow-x: hidden;
+  }
+  .container-fluid {
+    padding: 0px;
+    margin : 0px;
+    overflow-x: hidden;
+  }
+
+  body{
+    padding:0;
+  }
+
+  .container .jumbotron, .container-fluid .jumbotron {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+
+  .button-big {height:70px;
+    width:70;
+    outline:0;
+
+  }
+  .button-big-image {width: 40px;}
+  .jumbotron {padding-left:0px; padding-right:0px; margin-bottom:30px}
+  .my-padding {padding:0px}
+  .my-bootstraptable-tr {font-size:65%; margin:0px; padding:0px}
+  .my-bootstraptable-header {font-size:65%; margin:0px; padding:0px}
+  .my-bootstrap-body {padding:0px}
+  .my-button {width:140px; height:60px; font-size:80%};
+
+  h3, .h3 { font-size: 16px; margin-top:5px; margin-bottom:10px}
+  .my-label {
+    font-size: 75%;
+    margin-bottom:2px;
+  }
+
+  .mem-label {
+    font-size:60%;
+  }
+
+  .nopadding {
+    padding-left: 3px !important;
+    padding-right: 3px !important;
+  }
+  .btn-toolbar > *,
+  .btn-group-mano > * {
+    font-size: 11px;
+    width:90px;
+    text-align:center;
+    padding:5px;
+  }
+  .nav {
+    padding-left:40px;
+    padding-right:40px;
+  }
+
+  //settings nav bar
+  .nav>li>a {
+    padding:4px;
+  }
+  .daySelector{
+    font-size: 8px;
+    padding:0px;
+  }
+
+  .botMarginLG {margin-bottom:0px;}
+  //boostrap table no data label
+  .react-bs-table-no-data {
+    font-size:50%;
+  }
+
+  //bootstrap table edit cell
+  .edit-text, .edit-select{
+
+    font-size:90%;
+    padding: 5px;
+    margin:0px;
+    height:50%;
+  }
+
+  .oneSideButton{
+    padding-top:40px;
+  }
+
+  .twoSideButtons{
+    padding-top:40px;
+  }
+
+  .threeSideButtons{
+    padding-top:40px;
+  }
+
+  .mainBar {
+    height:90px;
+  }
+
+  .rfCanvas{
+    height: 65px;
+    padding-top:5px;
+  }
+
+  input.mystyle[type="text"] {
+    height: 35px;
+    width: 130px;
+    line-height: 14px;
+    font-size: 12px;
+    background-color:$input_background_color;
+    color:#fff;
+  }
+
+  .Select{
+    width: 130px;
+    font-size: 12px;
+  }
+
+  .Select-control{
+    width: 130px;
+    font-size: 12px;
+  }
+
+
+  ul li.radioMenu{
+    color: white;
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 25px;
+  }
+
+  ul li input[type=radio]{
+    position: absolute;
+    visibility: hidden;
+  }
+
+  ul li label.radioMenu{
+    display: block;
+    position: relative;
+    font-weight: 300;
+    font-size: 0.95em;
+    padding: 5px 25px 0px 25px;
+    margin: 0px auto;
+    height: 25px;
+    z-index: 4;
+  }
+
+
+  ul li .check{
+    display: block;
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    top: 5px;
+    z-index: 1;
+  }
+
+  ul li .check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 12px;
+    width: 12px;
+    top: 2px;
+    left: 2px;
+    margin: auto;
+  }
+
+
+  input[type=radio]:checked ~ .check {
+    border: 2px solid $commesh_blue;
+  }
+
+
+  .logTable{
+    font-size:0.5em
+  }
+
+
+
+  // max 992
+}
+
+@media (min-width: 992px) {
+
+  .botMarginLG {margin-bottom:50px;}
+  .button-big {height:120px; width:120px;}
+  .button-big-image {width: 90px; max-width:80px;}
+
+  .my-label {
+    font-size: 90%;
+    margin-bottom:2px;
+  }
+
+  .jumbotron {padding-left:10px; padding-right:10px; margin-top:30px}
+  .my-button {width:170px; height:80px};
+
+  .nopadding {
+    padding-left: 15 !important;
+    padding-right: 15 !important;
+  }
+
+  //bootstrap table edit cell
+  .edit-text, .edit-select{
+    height:70%;
+    padding:5px;
+    margin:0px;
+  }
+
+  .oneSideButton{
+    padding-top:400px;
+  }
+
+  .twoSideButtons{
+    padding-top:95px;
+  }
+
+
+  .threeSideButtons{
+    padding-top:50px;
+  }
+
+  //top and bottom bars
+  .mainBar {
+    height:100px;
+  }
+
+  //RF bar painting
+  .rfCanvas{
+    height: 85px;
+    padding-top:5px;
+  }
+
+  .powerUtility {
+    padding-left:55px;
+    padding-top:10px;
+  }
+
+  input.mystyle[type="text"] {
+    height: 35px;
+    width: 170px;
+    line-height: 14px;
+    background-color:$input_background_color;
+    border: solid 1px $input_border_color;
+    color: #fff;
+
+  }
+
+  input.mystyle[type="text"]:disabled {
+    background-color:$inpute_disabled_bg_color;
+    color:$main_background_color;
+  }
+
+
+
+  .mem-label {
+    font-size:12px;
+  }
+
+
+  .Select{
+    width: 170px;
+  }
+
+  .Select-control{
+    width: 170px;
+  }
+
+  ul li.radioMenu{
+    color: white;
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 40px;
+  }
+
+  ul li input[type=radio]{
+    position: absolute;
+    visibility: hidden;
+  }
+
+  ul li label.radioMenu{
+    display: block;
+    position: relative;
+    font-weight: 300;
+    font-size: 1.35em;
+    padding: 3px 25px 25px 30px;
+    margin: 5px auto;
+    height: 30px;
+    z-index: 4;
+    cursor: pointer;
+  }
+
+  ul li .check{
+    display: block;
+    position: absolute;
+    border: 3px solid white;
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+    top: 10px;
+    left: 0px;
+    z-index: 1;
+  }
+
+  ul li:hover .check {
+    border: 3px solid white;
+  }
+
+  ul li .check::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 13px;
+    width: 13px;
+    top: 3px;
+    left: 3px;
+    margin: auto;
+  }
+
+
+  input[type=radio]:checked ~ .check {
+    border: 3px solid $commesh_blue;
+  }
+
+
+  .logTable{
+    font-size:0.75em;
+  }
+
+
+  .btn-toolbar > *,
+  .btn-group-mano > * {
+    width:110px;
+    text-align:center;
+    padding:5px;
+  }
+
+  //min 992
+
+
+}
+
+
+.btn-mano{
+  padding: 5px 20px 5px 8px;
+  border-radius: 6px;
+
+}
+
+
+
+
+
+
+.switch {
+    position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {display:none;}
+
+
+.rangeslider-horizontal .rangeslider__fill
+{
+    height:100%;
+    background-color:$commesh_blue;
+    border-radius:10px;
+    top:0
+}
+
+.rangeslider-horizontal .rangeslider__handle:after {
+    background-color:$commesh_blue;
+}
+
+
+.react-ip-input {
+  display: inline-block;
+  border: 0px solid #c2c3c9;
+  border-radius: 4px;
+  padding: 5px 5px;
+  background-color: white;
+  color: black;
+}
+.react-ip-input .react-ip-input__item {
+  display: inline-block;
+}
+.react-ip-input.has-error {
+  border-color: #a94442;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.react-ip-input input {
+  width: 35px;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+/**
+ * Progress bars with centered text
+ */
+
+.progress {
+  position: relative;
+}
+
+.progress span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  color: white;
+  padding-top: 4px;
+  font-size: 130%;
+}
+
+.progress {border: 0px solid rgba(245, 245, 245, 1); border-radius: 6px; height: 30px;}
+.progress-bar-custom {background: rgba(66, 139, 202, 1);}
+
+
+.center-block {float: none !important; margin: 0 auto !important}
+
+textarea {
+  min-height:130px;
+}
+
+.noresize {
+  resize: none;
+}
+
+.vresize {
+  resize: vertical;
+}
+
+.hresize {
+  resize: horizontal;
+}
+
+wrapper {
+  flex: 1
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.mainFrame {
+  padding-left:5px;
+  padding-right:5px;
+  min-height:600px;
+  //padding:0px;
+}
+.winName {
+
+  padding-left:10px;
+}
+
+.soundCanvas{
+  border:1px solid $input_border_color;
+  border-radius:5px;
+  //outline: gray 1px solid;
+}
+
+.btn-xs, .btn-group-xs>.btn {
+  padding:0px 2px 0px 2px;
+}
+
+.table>tbody>tr>td, .table>tfoot>tr>td {
+  padding:5px;
+  vertical-align:middle;
+}
+
+.nav .btn {
+  font-size: 12px;
+  background-color:$input_border_color;
+  border: solid 1px $input_border_color;
+  &:hover {
+    background-color: gray;
+    border: solid 1px $input_border_color;
+  }
+}
+
+.btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary{
+
+  background-color: $input_background_color;
+  border: solid 0px $input_border_color;
+  color:$commesh_blue;
+
+}
+
+.btn-primary{
+  background-color: $input_background_color;
+  border: none;
+
+
+}
+
+.btn-primary:hover{
+  background-color:$button_hover_color;
+  border: none;
+
+}
+
+
+.btn-default{
+
+  background-color: $input_background_color;
+  border: solid 1px $input_border_color;
+
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus
+{
+  outline:none;
+  border: solid 1px $input_border_color;
+}
+
+.btn-default:hover{
+  background-color:$button_hover_color;
+}
+
+
+
+
+.progress span {
+  position: absolute;
+  z-index: 2;
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+
+
+.nameLabel{
+  color:$commesh_blue
+}
+
+.container ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+input[type=radio]:checked ~ .check::before{
+  background: $commesh_blue;
+}
+
+input[type=radio]:checked ~ label{
+  color: $commesh_blue;
+}
+
+.equal, .equal > div[class*='col-'] {
+  display: flex;
+  flex:1 1 auto;
+  flex-wrap: wrap;
+}
+
+
+.custom-checkbox > [type="checkbox"],
+.custom-checkbox > label{
+  margin-bottom:0px !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.custom-checkbox > [type="checkbox"]:not(:checked),
+.custom-checkbox > [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+.custom-checkbox > [type="checkbox"]:not(:checked) + label,
+.custom-checkbox > [type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 22px;
+  cursor: pointer;
+}
+.custom-checkbox > [type="checkbox"]:not(:checked) + label:before,
+.custom-checkbox > [type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left:0;
+  top: 50%;
+  margin-top:-9px;
+  width: 17px;
+  height: 17px;
+  border: solid 1px $input_border_color;
+  background: $input_background_color;
+  border-radius: 2px;
+}
+.custom-checkbox > [type="checkbox"]:not(:checked) + label:after,
+.custom-checkbox > [type="checkbox"]:checked + label:after {
+  font: normal normal normal 12px/1 'Glyphicons Halflings';
+  content: '\e013';
+  position: absolute;
+  top: 50%;
+  margin-top:-7px;
+  left: 2px;
+  color: $commesh_blue;
+  xtransition: all .2s;
+}
+
+.custom-checkbox > [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+.custom-checkbox > [type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+.custom-checkbox > [type="checkbox"]:disabled:checked + label:after {
+  color: #dadada; cursor: not-allowed;
+}
+.custom-checkbox > [type="checkbox"]:disabled + label {
+  color: #aaa; cursor: not-allowed;
+}
+
+.custom-checkbox > label:hover:before {
+  border: 1px solid $commesh_blue !important;
+}
+.custom-checkbox > [type="checkbox"]:disabled:not(:checked) + label:hover:before,
+.custom-checkbox > [type="checkbox"]:disabled:checked + label:hover:before{
+  border: 1px solid $commesh_blue !important;
+}
+
+.Select-option {
+  background: $input_border_color;
+  color: white;
+}
+
+.Select-option.is-selected, .Select-option.is-focused {
+  background: $input_background_color;
+  color: white;
+}
+
+.react-bs-table table td,
+.react-bs-table table th {
+  overflow: visible;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.Select-option:last-child {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+
+  background: $input_background_color;
+  border: 0px solid $input_border_color;
+}
+
+
+
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
+
+  background: $main_background_color;
+  border: 0px solid $input_border_color;
+  color:$commesh_blue;
+
+}
+
+.btn-work {
+  width: 80px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+.top-image {
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    margin-top: -3px;
+    margin-left: -7px;
+
+/*  left: 50%;*/
+  //top: 50%;
+  //margin-top: 5px;
+  //margin-left: 0px;
+    /*float: left;*/
+}
+
+.Select.is-disabled > .Select-control {
+  background-color:$input_border_color;
+  color:gray;
+}
+
+.row.inline-block > *{display: inline-block; float: none; vertical-align: top;}
+
+
+.button-big:hover{
+      background-color:$input_border_color;
+      border:none;
+}
+.button-big:active:hover {
+      background-color: #2c2c2c;
+  }
+
+//selected item border color (modal for example)
+:focus {
+    outline-color: gray;
+}

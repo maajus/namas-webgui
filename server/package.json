@@ -1,0 +1,20 @@
+{
+  "name": "indigma2_web_gui_server",
+  "version": "1.0.0",
+  "description": "Indigma2 web GUI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "J. Mazeika",
+  "license": "MIT",
+  "dependencies": {
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "jstoxml": "^0.2.4",
+    "koa": "^2.0.1",
+    "koa-mount": "^3.0.0",
+    "koa-static": "^3.0.0",
+    "socket.io": "^1.7.2",
+    "xml2js": "^0.4.17"
+  }
+}
