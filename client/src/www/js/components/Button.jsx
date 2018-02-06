@@ -29,12 +29,10 @@ this.pStyle = {
 
         getIcon(){
 
-            return;
-
-            //if(this.props.enabled)
-                //return require('url!../../images/'+this.props.icon+'.png');
-            //else
-                //return require('url!../../images/disabled/'+this.props.icon+'.png');
+            if(this.props.enabled)
+                return require('url!../../images/'+this.props.icon+'.png');
+            else
+                return require('url!../../images/disabled/'+this.props.icon+'.png');
 
         };
 

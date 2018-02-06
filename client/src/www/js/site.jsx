@@ -13,7 +13,7 @@ import Main from "./pages/Main";
 //import Tx_win from "./pages/Tx_win";
 //import Log from "./pages/Log";
 //import Wifi from "./pages/Wifi";
-//import RxSettings from "./pages/RxSettings"
+import Settings from "./pages/Settings"
 //import Network_win from "./pages/Network_win"
 //import TxSettings from "./pages/TxSettings"
 //import Timerpad from "./pages/Timerpad"
@@ -38,6 +38,7 @@ ReactDOM.render(
         <Route path="/" component={Layout} history={hashHistory}>
             <IndexRoute  component={Main} history={hashHistory}/>
             <Route path="main" component={Main} history={hashHistory}/>
+            <Route path="settings" component={Settings} history={hashHistory}/>
         </Route>
     </Router>
     </Provider>,

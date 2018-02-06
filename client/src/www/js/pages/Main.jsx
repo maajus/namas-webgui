@@ -112,6 +112,15 @@ export default class Main extends React.Component {
                             onClick={this.buttonClick.bind(this)}/>
                     </div>
 
+                    <div className={col_class} >
+                        <Button id={Buttons.Settings}
+                            label="Settings"
+                            icon="Download_Mode"
+                            onClick={this.buttonClick.bind(this)}/>
+                    </div>
+
+
+
                 </div>
         );
     }

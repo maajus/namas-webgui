@@ -41,15 +41,15 @@ export default class Layout extends React.Component {
         if(this.props.IOstate == "0" && (this.props.loginStatus == "0"))
             return <NoCon text="No connection with RX"/>;
 
-        if(this.props.loginStatus != "0")
-            return <LoginPage/>;
+        //if(this.props.loginStatus != "0")
+            //return <LoginPage/>;
 
         return this.props.children;
     }
 
     topBar(){
 
-        if(this.props.loginStatus != "0") return null;
+        //if(this.props.loginStatus != "0") return null;
         return(<TopBar history={this.props.route.history}/>);
 
     }

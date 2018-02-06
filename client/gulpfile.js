@@ -90,6 +90,17 @@ gulp.task("copy", function() {
 	gulp.src("src/www/**/*.html")
 		.pipe(gulp.dest("dist/www"));
 
+	gulp.src("src/www/css/*")
+		.pipe(gulp.dest("dist/www/css/"));
+
+	gulp.src("src/www/images/*")
+		.pipe(gulp.dest("dist/www/images/"));
+
+	gulp.src("src/www/fonts/*")
+		.pipe(gulp.dest("dist/www/fonts/"));
+
+
+
 	//gulp.src(["src/**/*","!src/www/**/*"])
 		//.pipe(gulp.dest("dist"));
 

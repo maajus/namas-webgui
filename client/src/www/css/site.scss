@@ -649,8 +649,8 @@ input[type=radio]:checked ~ label{
 }
 .custom-checkbox > [type="checkbox"]:not(:checked) + label:after,
 .custom-checkbox > [type="checkbox"]:checked + label:after {
-  font: normal normal normal 12px/1 'Glyphicons Halflings';
-  content: '\e013';
+  font: normal normal normal 12px/1 'FontAwesome';
+  content: '\f00c';
   position: absolute;
   top: 50%;
   margin-top:-7px;

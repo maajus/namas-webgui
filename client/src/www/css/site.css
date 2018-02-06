@@ -46,7 +46,7 @@
     margin-bottom: 30px; }
   .my-padding {
     padding: 0px; }
-  .my-bootstraptable-tr {
+  .my-bootstraptable-tr, .td-row-new {
     font-size: 65%;
     margin: 0px;
     padding: 0px; }
@@ -56,18 +56,28 @@
     padding: 0px; }
   .my-bootstrap-body {
     padding: 0px; }
+  .my-button {
+    width: 140px;
+    height: 60px;
+    font-size: 80%; }
   h3, .h3 {
     font-size: 16px;
     margin-top: 5px;
     margin-bottom: 10px; }
   .my-label {
-    font-size: 75%; }
+    font-size: 75%;
+    margin-bottom: 2px; }
+  .mem-label {
+    font-size: 60%; }
   .nopadding {
     padding-left: 3px !important;
     padding-right: 3px !important; }
   .btn-toolbar > *,
   .btn-group-mano > * {
-    font-size: 10px; }
+    font-size: 11px;
+    width: 90px;
+    text-align: center;
+    padding: 5px; }
   .nav {
     padding-left: 40px;
     padding-right: 40px; }
@@ -92,22 +102,22 @@
   .threeSideButtons {
     padding-top: 40px; }
   .mainBar {
-    height: 80px; }
+    height: 90px; }
   .rfCanvas {
     height: 65px;
     padding-top: 5px; }
   input.mystyle[type="text"] {
     height: 35px;
-    width: 140px;
+    width: 130px;
     line-height: 14px;
     font-size: 12px;
-    background-color: #3a3a3a;
+    background-color: #3A3A3A;
     color: #fff; }
   .Select {
-    width: 140px;
+    width: 130px;
     font-size: 12px; }
   .Select-control {
-    width: 140px;
+    width: 130px;
     font-size: 12px; }
   ul li.radioMenu {
     color: white;
@@ -123,35 +133,30 @@
     display: block;
     position: relative;
     font-weight: 300;
-    font-size: 0.65em;
-    padding: 4px 5px 5px 20px;
+    font-size: 0.95em;
+    padding: 5px 25px 0px 25px;
     margin: 0px auto;
-    height: 8px; }
-  ul li:hover label {
-    color: #AAAAAA; }
+    height: 25px;
+    z-index: 4; }
   ul li .check {
     display: block;
     position: absolute;
     border: 2px solid white;
     border-radius: 100%;
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
     top: 5px;
     z-index: 1; }
-  ul li:hover .check {
-    border: 2px solid #FFFFFF; }
   ul li .check::before {
     display: block;
     position: absolute;
     content: '';
     border-radius: 100%;
-    height: 7px;
-    width: 7px;
+    height: 12px;
+    width: 12px;
     top: 2px;
     left: 2px;
-    margin: auto;
-    transition: background 0.25s linear;
-    -webkit-transition: background 0.25s linear; }
+    margin: auto; }
   input[type=radio]:checked ~ .check {
     border: 2px solid #10BDC9; }
   .logTable {
@@ -167,11 +172,15 @@
     width: 90px;
     max-width: 80px; }
   .my-label {
-    font-size: 90%; }
+    font-size: 90%;
+    margin-bottom: 2px; }
   .jumbotron {
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 30px; }
+  .my-button {
+    width: 170px;
+    height: 80px; }
   .nopadding {
     padding-left: 15 !important;
     padding-right: 15 !important; }
@@ -197,9 +206,14 @@
     height: 35px;
     width: 170px;
     line-height: 14px;
-    background-color: #3a3a3a;
+    background-color: #3A3A3A;
     border: solid 1px #464545;
     color: #fff; }
+  input.mystyle[type="text"]:disabled {
+    background-color: #6B6B6B;
+    color: #303030; }
+  .mem-label {
+    font-size: 12px; }
   .Select {
     width: 170px; }
   .Select-control {
@@ -219,14 +233,11 @@
     position: relative;
     font-weight: 300;
     font-size: 1.35em;
-    padding: 3px 25px 25px 50px;
+    padding: 3px 25px 25px 30px;
     margin: 5px auto;
     height: 30px;
     z-index: 4;
-    cursor: pointer;
-    -webkit-transition: all 0.25s linear; }
-  ul li:hover label {
-    color: #AAAAAA; }
+    cursor: pointer; }
   ul li .check {
     display: block;
     position: absolute;
@@ -235,10 +246,10 @@
     height: 25px;
     width: 25px;
     top: 10px;
-    left: 20px;
+    left: 0px;
     z-index: 1; }
   ul li:hover .check {
-    border: 3px solid #FFFFFF; }
+    border: 3px solid white; }
   ul li .check::before {
     display: block;
     position: absolute;
@@ -248,13 +259,16 @@
     width: 13px;
     top: 3px;
     left: 3px;
-    margin: auto;
-    transition: background 0.25s linear;
-    -webkit-transition: background 0.25s linear; }
+    margin: auto; }
   input[type=radio]:checked ~ .check {
     border: 3px solid #10BDC9; }
   .logTable {
-    font-size: 0.75em; } }
+    font-size: 0.75em; }
+  .btn-toolbar > *,
+  .btn-group-mano > * {
+    width: 110px;
+    text-align: center;
+    padding: 5px; } }
 
 .btn-mano {
   padding: 5px 20px 5px 8px;
@@ -269,114 +283,14 @@
 .switch input {
   display: none; }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s; }
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 22px;
-  width: 24px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s; }
-
-input:checked + .slider {
-  background-color: #0abcc7; }
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3; }
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(28px);
-  -ms-transform: translateX(28px);
-  transform: translateX(28px); }
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px; }
-
-.slider.round:before {
-  border-radius: 50%; }
-
-/**
-   * Rangeslider
-   */
-.rangeslider {
-  margin: 20px 0;
-  position: relative;
-  background: #e6e6e6; }
-
-.rangeslider .rangeslider__fill,
-.rangeslider .rangeslider__handle {
-  position: absolute; }
-
-.rangeslider,
-.rangeslider .rangeslider__fill {
-  display: block;
-  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3); }
-
-.rangeslider .rangeslider__handle {
-  background: #fff;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  display: inline-block;
-  position: absolute; }
-
-.rangeslider .rangeslider__handle:active {
-  background: #999; }
-
-/**
-   * Rangeslider - Horizontal slider
-   */
-.rangeslider-horizontal {
-  height: 10px;
-  border-radius: 10px; }
-
 .rangeslider-horizontal .rangeslider__fill {
   height: 100%;
-  background: #0abcc7;
+  background-color: #10BDC9;
   border-radius: 10px;
   top: 0; }
 
-.rangeslider-horizontal .rangeslider__handle {
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
-  top: -5px; }
-
-/**
-   * Rangeslider - Vertical slider
-   */
-.rangeslider-vertical {
-  margin: 20px auto;
-  height: 150px;
-  max-width: 10px;
-  background: none; }
-
-.rangeslider-vertical .rangeslider__fill {
-  width: 100%;
-  background: #27ae60;
-  box-shadow: none;
-  bottom: 0; }
-
-.rangeslider-vertical .rangeslider__handle {
-  width: 30px;
-  height: 10px;
-  left: -10px; }
-
-.rangeslider-vertical .rangeslider__handle:active {
-  box-shadow: none; }
+.rangeslider-horizontal .rangeslider__handle:after {
+  background-color: #10BDC9; }
 
 .react-ip-input {
   display: inline-block;
@@ -400,8 +314,8 @@ input:checked + .slider:before {
   text-align: center; }
 
 /**
-   * Progress bars with centered text
-   */
+ * Progress bars with centered text
+ */
 .progress {
   position: relative; }
 
@@ -441,7 +355,6 @@ wrapper {
   flex: 1; }
 
 canvas {
-  padding-top: 15px;
   width: 100%;
   height: 100%; }
 
@@ -452,6 +365,10 @@ canvas {
 
 .winName {
   padding-left: 10px; }
+
+.soundCanvas {
+  border: 1px solid #464545;
+  border-radius: 5px; }
 
 .btn-xs, .btn-group-xs > .btn {
   padding: 0px 2px 0px 2px; }
@@ -469,19 +386,28 @@ canvas {
     border: solid 1px #464545; }
 
 .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-  background-color: #3A3A3A; }
+  background-color: #3A3A3A;
+  border: solid 0px #464545;
+  color: #10BDC9; }
 
 .btn-primary {
-  background-color: #464545; }
+  background-color: #3A3A3A;
+  border: none; }
 
 .btn-primary:hover {
-  background-color: #808080; }
+  background-color: #636363;
+  border: none; }
 
 .btn-default {
-  background-color: #464545; }
+  background-color: #3A3A3A;
+  border: solid 1px #464545; }
+
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+  outline: none;
+  border: solid 1px #464545; }
 
 .btn-default:hover {
-  background-color: #808080; }
+  background-color: #636363; }
 
 .progress span {
   position: absolute;
@@ -540,8 +466,8 @@ input[type=radio]:checked ~ label {
   margin-top: -9px;
   width: 17px;
   height: 17px;
-  border: solid 1px #5F5F5F;
-  background: #464545;
+  border: solid 1px #464545;
+  background: #3A3A3A;
   border-radius: 2px; }
 
 .custom-checkbox > [type="checkbox"]:not(:checked) + label:after,
@@ -552,7 +478,7 @@ input[type=radio]:checked ~ label {
   top: 50%;
   margin-top: -7px;
   left: 2px;
-  color: #0ABCC7;
+  color: #10BDC9;
   xtransition: all .2s; }
 
 .custom-checkbox > [type="checkbox"]:not(:checked) + label:after {
@@ -572,29 +498,71 @@ input[type=radio]:checked ~ label {
   cursor: not-allowed; }
 
 .custom-checkbox > label:hover:before {
-  border: 1px solid #0ABCC7 !important; }
+  border: 1px solid #10BDC9 !important; }
 
 .custom-checkbox > [type="checkbox"]:disabled:not(:checked) + label:hover:before,
 .custom-checkbox > [type="checkbox"]:disabled:checked + label:hover:before {
-  border: 1px solid #0ABCC7 !important; }
+  border: 1px solid #10BDC9 !important; }
 
-.Select-option.is-focused {
-  background-color: #3a3a3a;
-  /* Fallback color for IE 8 */
-  background-color: rgba(0, 126, 255, 0.08);
-  color: #333; }
+.Select-option {
+  background: #464545;
+  color: white; }
 
-::selection {
-  color: #fff;
-  background: #3a3a3a; }
+.Select-option.is-selected, .Select-option.is-focused {
+  background: #3A3A3A;
+  color: white; }
 
-/* For Mozilla Firefox */
-::-moz-selection {
-  color: #fff;
-  background: #3a3a3a; }
+.react-bs-table table td,
+.react-bs-table table th {
+  overflow: visible;
+  white-space: nowrap;
+  text-overflow: ellipsis; }
 
-.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
-  outline-color: #464545; }
+.Select-option:last-child {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px; }
 
-*:focus, *:active:focus, *.active:focus, *.focus, *:active.focus, *.active.focus {
-  outline-color: #969696; }
+.btn-primary:focus, .btn-primary.focus {
+  background: #3A3A3A;
+  border: 0px solid #464545; }
+
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open > .dropdown-toggle.btn-primary.focus, .open > .dropdown-toggle.btn-primary:focus, .open > .dropdown-toggle.btn-primary:hover {
+  background: #303030;
+  border: 0px solid #464545;
+  color: #10BDC9; }
+
+.btn-work {
+  width: 80px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0;
+  display: table-cell;
+  vertical-align: middle; }
+
+.top-image {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-top: -3px;
+  margin-left: -7px;
+  /*  left: 50%;*/
+  /*float: left;*/ }
+
+.Select.is-disabled > .Select-control {
+  background-color: #464545;
+  color: gray; }
+
+.row.inline-block > * {
+  display: inline-block;
+  float: none;
+  vertical-align: top; }
+
+.button-big:hover {
+  background-color: #464545;
+  border: none; }
+
+.button-big:active:hover {
+  background-color: #2c2c2c; }
+
+:focus {
+  outline-color: gray; }
