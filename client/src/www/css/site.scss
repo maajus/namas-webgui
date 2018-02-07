@@ -140,7 +140,7 @@ $button_hover_color: #636363;
   }
 
   .mainBar {
-    height:90px;
+    height:70px;
   }
 
   .rfCanvas{
@@ -273,7 +273,7 @@ $button_hover_color: #636363;
 
   //top and bottom bars
   .mainBar {
-    height:100px;
+    height:80px;
   }
 
   //RF bar painting
@@ -504,6 +504,8 @@ canvas {
   padding-left:5px;
   padding-right:5px;
   min-height:600px;
+  padding-top:20px;
+  margin-top:10px;
   //padding:0px;
 }
 .winName {
@@ -765,4 +767,9 @@ input[type=radio]:checked ~ label{
 //selected item border color (modal for example)
 :focus {
     outline-color: gray;
+}
+
+
+.my-container{
+    margin-top:10px;
 }

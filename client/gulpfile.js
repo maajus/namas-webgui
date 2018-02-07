@@ -91,13 +91,13 @@ gulp.task("copy", function() {
 		.pipe(gulp.dest("dist/www"));
 
 	gulp.src("src/www/css/*")
-		.pipe(gulp.dest("dist/www/css/"));
+		.pipe(gulp.dest("dist/www/css"));
 
 	gulp.src("src/www/images/*")
-		.pipe(gulp.dest("dist/www/images/"));
+		.pipe(gulp.dest("dist/www/images"));
 
 	gulp.src("src/www/fonts/*")
-		.pipe(gulp.dest("dist/www/fonts/"));
+		.pipe(gulp.dest("dist/www/fonts"));
 
 
 

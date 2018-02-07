@@ -33,7 +33,7 @@ var mem_style = {textAlign:'left', fontSize:'16px',marginTop:'15px', paddingLeft
 //var wifi_icon = require('url!../../images/WiFiON.png');
 //var wifi_icon_connected = require('url!../../images/APconnected.png');
 //var bat_charging_icon = require('url!../../images/battery_charging_icon.png');
-//var mem_icon = require('url!../../images/card_icon.png');
+var mem_icon = require('url!../../images/card_icon.png');
 
 @connect((store) => {
 
@@ -133,55 +133,30 @@ export default class TopBar extends React.Component {
 
     render() {
 
-        if(this.props.RxStatus == undefined) return null;
-        //if(this.props.loginStatus != "0") return null;
+        //var dformat = this.props.RxStatus.CurrentTime;
 
-        var dformat = this.props.RxStatus.CurrentTime;
-
-
-
-        
         let buttonName = "Close";
-        if(this.state.showModal == ModalInfo.TimerActive)
-            buttonName = "Interrupt";
-        let lte = "col-xs-4";
         let classN = "col-xs-4";
-        if(this.props.RxStatus.Modem_enabled != "1"){
-            lte = "col-xs-4 hidden";
-            classN = "col-xs-6";
-
-        }
 
 
         return (
-            <div className="container-fluid jumbotron mainBar" style={{padding:'5px'}}>
-                {/*
+            <div className="container-fluid jumbotron mainBar" style={{padding:'5px', marginBottom:"10px"}}>
                 <div className="row">
                     <div className="col-lg-2 col-md-2  col-xs-3 pull-left" style={mem_style}>
                         <img src={mem_icon} style={{marginRight:'1px'}}   width="12px" />
                         <label className="mem-label">
-                            {this.parseMem(this.props.RxStatus.FreeMemory, this.props.RxStatus.TotalMemory)} GB
+                            N/A GB
                         </label>
                         <br/>
                         {this.logoutWidget()}
                     </div>
 
-                    <div className="col-lg-8 col-md-8  col-xs-6" style={{padding:'0px'}}>
-                        <RFBar/>
-                    </div>
-
                     <div className="col-lg-2 col-md-2 col-xs-3 pull-right" style={{paddingLeft:'0px',marginTop:'10px'}}>
                         <div style={date_style}>
-                            {this.wifiStatus()}
-                            <label className="my-label">{this.parseDate(dformat)}</label>
+                            <label className="my-label">laiks?</label>
                         </div>
                         <div className="pull-right">
-                            <div className={classN} style={{padding:"0px",paddingRight:"10px", textAlign:"right"}}>{this.RecTriggers()} </div>
-                            <div className={lte} style={{padding:"0px",paddingLeft:"5px"}}>{this.lte_icon()} </div>
-                            <div className={classN} style={{padding:"0px", textAlign:"right"}} >
-                                {this.bat_icon()}
-                            </div>
-                        </div>
+                                                    </div>
                     </div>
                 </div>
 
@@ -199,7 +174,6 @@ export default class TopBar extends React.Component {
                         </button>
                     </ModalFooter>
                 </Modal>
-                */}
             </div>
         );
     }

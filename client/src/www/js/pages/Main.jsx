@@ -1,6 +1,6 @@
 "use strict;"
 import React from "react";
-import Button from "../components/Button";
+import Info from "../components/Info";
 
 import { connect } from "react-redux"
 import { getRxConfig } from "../actions/fetchActions";
@@ -52,19 +52,19 @@ export default class Main extends React.Component {
 
         switch(id){
             case Buttons.Corridor:
-                this.props.route.history.push('/tx_win?mode=corridor');
+                this.props.route.history.push('/corridor');
                 break;
             case Buttons.Bathroom:
-                this.props.route.history.push('/tx_win?mode=bathroom');
+                this.props.route.history.push('/bathroom');
                 break;
             case Buttons.Bedroom:
-                this.props.route.history.push('/tx_win?mode=bedroom');
+                this.props.route.history.push('/bedroom');
                 break;
             case Buttons.Workroom:
-                this.props.route.history.push('/tx_win?mode=workroom');
+                this.props.route.history.push('/workroom');
                 break;
             case Buttons.Livingroom:
-                this.props.route.history.push('/tx_win?mode=livingroom');
+                this.props.route.history.push('/livingroom');
                 break;
             case Buttons.Log:
                 this.props.route.history.push('/log');
@@ -93,32 +93,51 @@ export default class Main extends React.Component {
 
     render() {
 
-        var col_class = "col-md-2 col-sm-4 col-xs-4";
+        var col_class = "col-lg-4 col-md-4 col-sm-4";
 
         return (
-            <div className="container-fluid jumbotron mainFrame">
+            <div style={{paddingTop:"30px"}} >
 
+            <div className="row" >
                     <div className={col_class} >
-                        <Button id={Buttons.AllLightsON}
-                            label="Įjungti visas šviesas"
-                            icon="Download_Mode"
+                        <Info id={Buttons.Livingroom}
+                            label="Svetaine"
+                            data={this.props.status.Livingroom}
                             onClick={this.buttonClick.bind(this)}/>
                     </div>
 
                     <div className={col_class} >
-                        <Button id={Buttons.AllLightsOFF}
-                            label="Išjungti visas šviesas"
-                            icon="Download_Mode"
+                        <Info id={Buttons.Bedroom}
+                            label="Miegamasis"
+                            data={this.props.status.Bedroom}
                             onClick={this.buttonClick.bind(this)}/>
                     </div>
 
                     <div className={col_class} >
-                        <Button id={Buttons.Settings}
-                            label="Settings"
-                            icon="Download_Mode"
+                        <Info id={Buttons.Bathroom}
+                            label="Vonia"
+                            data={this.props.status.Bathroom}
+                            onClick={this.buttonClick.bind(this)}/>
+                    </div>
+                    </div>
+
+            <div className="row" style={{paddingTop:"30px"}} >
+                    <div className="col-xs-4" >
+                        <Info id={Buttons.Workroom}
+                            label="Darbo kambarys"
+                            data={this.props.status.Workroom}
                             onClick={this.buttonClick.bind(this)}/>
                     </div>
 
+                    <div className="col-xs-4" >
+                        <Info id={Buttons.Corridor}
+                            label="Koridorius"
+                            data={this.props.status.Corridor}
+                            onClick={this.buttonClick.bind(this)}/>
+                    </div>
+                    <div className="col-xs-4" />
+
+                    </div>
 
 
                 </div>

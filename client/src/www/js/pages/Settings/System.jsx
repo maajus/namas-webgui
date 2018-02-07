@@ -2,7 +2,7 @@ import React from "react";
 import Checkbox from "../../components/Checkbox";
 import { sendCommand } from "../../actions/fetchActions";
 import { connect } from "react-redux"
-
+import { fetchSettings } from "../../actions/fetchActions";
 
 @connect((store) => {
 
@@ -15,13 +15,11 @@ import { connect } from "react-redux"
 
 export default class System extends React.Component {
 
-    //get rx settings
-    refresh(){
+    componentDidMount(){
 
-        this.props.refresh();
 
+        this.props.dispatch(fetchSettings());
     }
-
 
     restartRX(){
 
@@ -31,12 +29,21 @@ export default class System extends React.Component {
 
     }
 
+    sendData(){
+
+        let data = this.state.data;
+        this.props.dispatch(sendCommand("Set","Settings",data));
+        console.log(this.sate.data);
+    }
+
+
 
     doorLightClicked(val){
 
         var data = this.props.data;
         data.door_light = val? "1":"0";
         this.setState({data:data});
+        this.sendData.bind(this);
     }
 
     doorSirenClicked(val){
@@ -44,6 +51,7 @@ export default class System extends React.Component {
         var data = this.props.data;
         data.door_siren = val? "1":"0";
         this.setState({data:data});
+        this.sendData.bind(this);
     }
 
     pirLcdClicked(val){
@@ -51,6 +59,7 @@ export default class System extends React.Component {
         var data = this.props.data;
         data.pir_lcd = val? "1":"0";
         this.setState({data:data});
+        this.sendData.bind(this);
     }
 
 
@@ -65,8 +74,6 @@ export default class System extends React.Component {
         //var perc = (100-(this.props.data.FreeMemory/this.props.data.TotalMemory)*100).toFixed(2);
         //var used = this.props.data.TotalMemory - this.props.data.FreeMemory;
         //if(used < 6) used = 0;
-
-        console.log(this.props.data);
 
         return (
             <div className="container-fluid">
