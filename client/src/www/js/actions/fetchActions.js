@@ -124,9 +124,9 @@ export function sendCommand(cmd, object, data){
 
     return function(dispatch) {
         socket.emit('req', {cmd: cmd, object: object, data:data});
-        dispatch({type: "SEND_CMD", payload:{cmd:cmd,object:object, data:data}})
+        //dispatch({type: "SEND_CMD", payload:{cmd:cmd,object:object, data:data}})
 
-}
+    }
 }
 
 

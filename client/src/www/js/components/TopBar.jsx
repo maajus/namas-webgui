@@ -143,17 +143,13 @@ export default class TopBar extends React.Component {
             <div className="container-fluid jumbotron mainBar" style={{padding:'5px', marginBottom:"10px"}}>
                 <div className="row">
                     <div className="col-lg-2 col-md-2  col-xs-3 pull-left" style={mem_style}>
-                        <img src={mem_icon} style={{marginRight:'1px'}}   width="12px" />
-                        <label className="mem-label">
-                            N/A GB
-                        </label>
                         <br/>
                         {this.logoutWidget()}
                     </div>
 
                     <div className="col-lg-2 col-md-2 col-xs-3 pull-right" style={{paddingLeft:'0px',marginTop:'10px'}}>
                         <div style={date_style}>
-                            <label className="my-label">laiks?</label>
+                            <label className="my-label">?</label>
                         </div>
                         <div className="pull-right">
                                                     </div>

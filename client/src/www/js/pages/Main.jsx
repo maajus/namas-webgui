@@ -3,7 +3,6 @@ import React from "react";
 import Info from "../components/Info";
 
 import { connect } from "react-redux"
-import { getRxConfig } from "../actions/fetchActions";
 import { Mode } from "../modules/Constants.js";
 import { sendCommand } from "../actions/fetchActions";
 
@@ -38,12 +37,7 @@ export default class Main extends React.Component {
 
     componentDidMount(){
 
-        this.props.dispatch(sendCommand("Get", "Status", ""));
-    }
-
-    componentWillReceiveProps(nextProps){
-
-        console.log(nextProps.status);
+        //this.props.dispatch(sendCommand("Get", "Status", ""));
     }
 
 

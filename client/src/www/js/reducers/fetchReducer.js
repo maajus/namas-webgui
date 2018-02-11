@@ -12,7 +12,6 @@ export function Status (state={
     switch (action.type) {
 
 
-
         case "FETCH_STATUS": {
             return {...state, fetching: true}
         }

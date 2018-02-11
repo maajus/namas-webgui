@@ -32,7 +32,6 @@ export default class Button extends React.Component {
 
     bulbIcon(){
 
-        console.log(this.props.data);
         if(
             this.props.data.L0 == "1" ||
             this.props.data.L1 == "1" ||
@@ -65,9 +64,9 @@ export default class Button extends React.Component {
                     <div className="col-xs-6">
                         <label >{this.props.label}</label><br/>
                         <img src={temp_icon} style={{marginRight:'1px', paddingTop:"10px"}}   width="30px" />
-                        <label >{this.props.data.T}</label><br/>
+                        <label >{this.props.data.T} °C</label><br/>
                         <img src={humi_icon} style={{marginRight:'1px',paddingTop:"10px"}}   width="30px" />
-                        <label >{this.props.data.H}</label>
+                        <label >{this.props.data.H} %</label>
                     </div>
                     <div className="col-xs-6" style={{paddingTop:"15px"}}>
                         {this.bulbIcon()}

@@ -14,6 +14,11 @@ import Main from "./pages/Main";
 //import Log from "./pages/Log";
 //import Wifi from "./pages/Wifi";
 import System from "./pages/Settings/System"
+import Livingroom from "./pages/Livingroom"
+import Bedroom from "./pages/Bedroom"
+import Corridor from "./pages/Corridor"
+import Workroom from "./pages/Workroom"
+import Bathroom from "./pages/Bathroom"
 //import Network_win from "./pages/Network_win"
 //import TxSettings from "./pages/TxSettings"
 //import Timerpad from "./pages/Timerpad"
@@ -39,6 +44,11 @@ ReactDOM.render(
             <IndexRoute  component={Main} history={hashHistory}/>
             <Route path="main" component={Main} history={hashHistory}/>
             <Route path="settings" component={System} history={hashHistory}/>
+            <Route path="livingroom" component={Livingroom} history={hashHistory}/>
+            <Route path="bedroom" component={Bedroom} history={hashHistory}/>
+            <Route path="corridor" component={Corridor} history={hashHistory}/>
+            <Route path="workroom" component={Workroom} history={hashHistory}/>
+            <Route path="bathroom" component={Bathroom} history={hashHistory}/>
         </Route>
     </Router>
     </Provider>,

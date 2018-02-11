@@ -13,8 +13,8 @@ gulp compress
 
 #cp -r /home/justas/work/namas/webgui/client/dist/www /run/user/1000/gvfs/smb-share:server=debian,share=data/client/dist/
 
+mkdir /var/tmp/rsync
 
-rsync -a /home/justas/work/namas/webgui/server /run/user/1000/gvfs/smb-share:server=debian,share=data/server --exclude node_modules
+rsync -r /home/justas/work/namas/webgui/server /run/user/1000/gvfs/smb-share:server=rpi,share=data/server --exclude node_modules --temp-dir /var/tmp/rsync
 
-rsync -a /home/justas/work/namas/webgui/client/dist/www /run/user/1000/gvfs/smb-share:server=debian,share=data/client/dist/ --exclude node_modules
-
+rsync -r /home/justas/work/namas/webgui/client/dist/www /run/user/1000/gvfs/smb-share:server=rpi,share=data/client/dist/ --exclude node_modules --temp-dir /var/tmp/rsync
